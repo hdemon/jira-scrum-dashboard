@@ -1,4 +1,6 @@
 import { combineReducers } from 'redux'
+import { connectRouter } from 'connected-react-router'
+
 import {
   SELECT_SUBREDDIT,
   INVALIDATE_SUBREDDIT,
@@ -58,9 +60,11 @@ const postsBySubreddit = (state: any = {}, action: any) => {
   }
 }
 
-const rootReducer = combineReducers({
-  postsBySubreddit,
-  selectedSubreddit,
-})
+const createRootReducer = (history: any) =>
+  combineReducers({
+    router: connectRouter(history),
+    postsBySubreddit,
+    selectedSubreddit,
+  })
 
-export default rootReducer
+export default createRootReducer
