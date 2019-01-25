@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import { connect } from 'react-redux'
 import {
   selectSubreddit,
@@ -16,7 +16,7 @@ export interface AsyncAppProps {
   lastUpdated: any
 }
 
-class AsyncApp extends Component<AsyncAppProps, {}> {
+class AsyncApp extends React.Component<AsyncAppProps, {}> {
   constructor(props: any) {
     super(props)
     this.handleChange = this.handleChange.bind(this)

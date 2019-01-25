@@ -1,3 +1,5 @@
+import * as React from 'react'
+
 const Posts = (props: any) => {
   return (
     <ul>

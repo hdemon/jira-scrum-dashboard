@@ -1,3 +1,5 @@
+import * as React from 'react'
+
 const Picker = (props: any): any => {
   const { value, onChange, options } = props
 
