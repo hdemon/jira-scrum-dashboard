@@ -10,7 +10,7 @@ class AsyncApp extends React.Component<AsyncAppProps, {}> {
   render() {
     return (
       <div>
-        <List list={[]} />
+        <List list={[1, 2, 3]} />
       </div>
     )
   }
