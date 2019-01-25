@@ -1,11 +1,12 @@
 import * as React from 'react'
+import { hot } from 'react-hot-loader'
 import { Provider } from 'react-redux'
 import configureStore from '../configureStore'
 import AsyncApp from './AsyncApp'
 
 const store = configureStore()
 
-export default class Root extends React.Component {
+class Root extends React.Component {
   render() {
     return (
       <Provider store={store}>
@@ -14,3 +15,7 @@ export default class Root extends React.Component {
     )
   }
 }
+
+const root = hot(module)(Root)
+
+export { root as Root }
